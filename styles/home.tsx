@@ -123,7 +123,6 @@ export const ArweaveSection = styled.section`
   }
 
   span {
-    background: pink;
     background: -webkit-linear-gradient(#280871, #95255e);
     background-clip: text;
     -webkit-background-clip: text;
