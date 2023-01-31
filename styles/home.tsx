@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const SpecialText = styled.span`
+  background: -webkit-linear-gradient(#280871, #95255e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
+
 export const IntroSectionWrapper = styled.section`
   background: url('/background1.svg');
   background-position: center;
@@ -121,11 +128,80 @@ export const ArweaveSection = styled.section`
     margin-top: 1rem;
     text-align: center;
   }
+`;
 
-  span {
-    background: -webkit-linear-gradient(#280871, #95255e);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+export const AllProjects = styled(IntroSectionWrapper)`
+  p,
+  h2 {
+    margin: 0;
+  }
+
+  p {
+    color: #a8a8a8;
+  }
+
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    text-align: center;
+    font-size: 2.1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+
+  > p {
+    color: #a8a8a8;
+    padding: 0 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  > img {
+    width: 90%;
+    height: 30vh;
+    margin-bottom: 1rem;
+  }
+`;
+
+export const AddProject = styled.section`
+  background: #fbfaf8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p,
+  h2 {
+    margin: 0;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1.5rem 1rem 1rem 1rem;
+
+    .break-text {
+      display: block;
+    }
+  }
+
+  > p {
+    color: #545a62;
+    padding: 0 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+`;
+
+export const ProjectSteps = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: 40vh;
+    margin: 1rem 0;
   }
 `;
