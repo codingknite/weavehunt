@@ -14,8 +14,6 @@ const Nav = () => {
     setIsOpen(!isOpen);
   };
 
-  console.log('OPEN', isOpen);
-
   return (
     <Styled.NavWrapper className={spaceGrotesk.className}>
       <Styled.Logo>

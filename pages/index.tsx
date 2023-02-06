@@ -2,9 +2,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Nav from '../components/nav';
 import type { NextPage } from 'next';
+import { useState } from 'react';
 import { Space_Grotesk } from '@next/font/google';
 import { AiOutlineSend } from 'react-icons/ai';
-import { FiRotateCcw } from 'react-icons/fi';
 import { RiQuillPenLine } from 'react-icons/ri';
 import { MainWrapper } from '../components/common';
 import AllProjects from '../components/cards/allprojects';
@@ -14,6 +14,14 @@ import * as Styled from '../styles/home';
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] });
 
 const Home: NextPage = () => {
+  const [userEmail, setUserEmail] = useState('');
+
+  const handleEmail = (event: React.FormEvent<HTMLInputElement>) => {
+    setUserEmail(event.currentTarget.value);
+  };
+
+  console.log('INPUT', userEmail);
+
   return (
     <div>
       <Head>
@@ -37,12 +45,18 @@ const Home: NextPage = () => {
             </p>
             <div>
               <div className='mail-icon'>
-                <RiQuillPenLine color='' size={25} />
+                {userEmail ? (
+                  <AiOutlineSend size={25} />
+                ) : (
+                  <RiQuillPenLine size={25} />
+                )}
               </div>
               <input
                 type='text'
-                placeholder='Enter Email to Join Waitlist'
+                value={userEmail}
+                placeholder='enter email to join waitlist'
                 className={spaceGrotesk.className}
+                onChange={handleEmail}
               />
             </div>
             <Image
@@ -153,9 +167,7 @@ const Home: NextPage = () => {
             <div className='launch'>
               <h3>
                 Get Feedback
-                <span>
-                  Re-Launch 🚀
-                </span>
+                <span>Re-Launch 🚀</span>
               </h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
