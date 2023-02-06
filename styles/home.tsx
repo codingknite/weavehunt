@@ -82,6 +82,7 @@ export const IntroSection = styled.section`
       border-radius: 70px;
       outline: none;
       font-size: 0.95rem;
+      text-transform: lowercase;
 
       &::placeholder {
         color: #000;
@@ -203,5 +204,198 @@ export const ProjectSteps = styled.div`
     width: 100%;
     height: 40vh;
     margin: 1rem 0;
+  }
+`;
+
+export const FeedbackSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+
+  .launch {
+    h3 {
+      text-align: center;
+      font-size: 2.1rem;
+      margin: 0;
+      padding: 2rem 1rem 0.4rem 1rem;
+
+      span {
+        display: block;
+      }
+    }
+
+    p {
+      color: #545a62;
+      text-align: center;
+      font-size: 14px;
+      padding: 0 1.2rem;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 250px;
+  }
+`;
+
+export const CommunitySection = styled.section`
+  background: url('/background1.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h3,
+  p {
+    margin: 0;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 2.1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
+    color: #fff;
+
+    span {
+      display: block;
+    }
+  }
+
+  p {
+    color: #d0d0d0 !important;
+    padding: 0 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .comm-item {
+    padding: 1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(1px);
+    margin-bottom: 2rem;
+
+    img {
+      width: 100%;
+      height: 260px;
+    }
+  }
+
+  .comm-item-info {
+    p {
+      color: #fff;
+      font-size: 15px;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+  }
+`;
+
+export const JobSection = styled.section`
+  background: #fbfaf8;
+  margin-bottom: 2rem;
+
+  h3,
+  p {
+    margin: 0;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 2.1rem;
+    margin: 0;
+    padding: 2rem 1rem 0.4rem 1rem;
+  }
+
+  p {
+    color: #545a62;
+    text-align: center;
+    font-size: 14px;
+    padding: 0 1.2rem;
+  }
+
+  img {
+    width: 100%;
+    height: 250px;
+  }
+`;
+
+export const GetStartedSection = styled.section`
+  background: url('/background1.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 2.1rem;
+    margin: 0;
+    padding: 1rem 1rem 0rem 1rem;
+  }
+
+  p {
+    color: #cccccc;
+    padding: 0 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+`;
+
+export const CTA = styled.div`
+  position: relative;
+
+  input {
+    padding: 1.2rem;
+    display: block;
+    margin: auto;
+    width: 80%;
+    border: none;
+    border-radius: 32px;
+    outline: none;
+    text-transform: lowercase;
+    background: rgba(217, 217, 217, 0.2);
+    color: #fff;
+
+    &::placeholder {
+      color: #fff;
+      font-size: 0.875rem;
+      font-family: inherit;
+    }
+  }
+
+  button {
+    margin: auto;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 25px;
+    position: absolute;
+    right: 50px;
+    top: 8.5px;
+    cursor: pointer;
+  }
+`;
+
+export const Footer = styled.footer`
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
   }
 `;
